@@ -294,7 +294,7 @@ chmod 775 piCoreCDSP
 
 cd /tmp
 install_temporarily_if_missing squashfs-tools
-mksquashfs piCoreCDSP piCoreCDSP.tcz
+mksquashfs piCoreCDSP piCoreCDSP.tcz -processors 1 -mem-percent 50
 mv -f piCoreCDSP.tcz /etc/sysconfig/tcedir/optional
 echo piCoreCDSP.tcz >> /etc/sysconfig/tcedir/onboot.lst
 
